@@ -17,6 +17,9 @@ dependencies:
   - name: recommendation-engine
     version: 0.1.0
     repository: file://recommendation-engine
+  - name: order-placement
+    version: 0.1.0
+    repository: file://order-placement
   - name: activity-tracking-simulator
     version: 0.1.0
     repository: file://activity-tracking-simulator
