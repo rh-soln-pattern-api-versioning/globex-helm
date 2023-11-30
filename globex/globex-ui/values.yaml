@@ -1,6 +1,6 @@
 replicaCount: 1
 
-image: quay.io/globex-recommendation/globex-recommendation-ui:summit-connect
+image: quay.io/rh_soln_pattern_api_versioning/globex-ui:latest
 imagePullPolicy: IfNotPresent
 
 serviceAccount:

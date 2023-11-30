@@ -47,7 +47,7 @@ Selector labels
 */}}
 {{- define "recommendation-engine.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "recommendation-engine.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/part-of: {{ .Release.Name }}
 {{- end }}
 
 {{/*
@@ -55,7 +55,7 @@ Create the name of the service account to use
 */}}
 {{- define "recommendation-engine.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "recommendation-engine.name" .) .Values.serviceAccount.name }}
+{{- default (include "recommendation-engine.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

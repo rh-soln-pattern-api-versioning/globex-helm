@@ -5,6 +5,7 @@ metadata:
   labels:
     {{- include "activity-tracking.labels" . | nindent 4 }}
     app.openshift.io/runtime: quarkus
+    service-binding/type: kafka
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -12,23 +13,17 @@ spec:
       {{- include "activity-tracking.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
         {{- include "activity-tracking.selectorLabels" . | nindent 8 }}
     spec:
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       serviceAccountName: {{ include "activity-tracking.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.image }}"
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.containerPort }}
+              containerPort: 8080
               protocol: TCP
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
@@ -39,8 +34,6 @@ spec:
           volumeMounts:
             - mountPath: /deployments/config
               name: config
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
       volumes:
         - name: config
           secret:
