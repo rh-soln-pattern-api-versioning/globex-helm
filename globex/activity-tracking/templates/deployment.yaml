@@ -4,8 +4,7 @@ metadata:
   name: {{ include "activity-tracking.name" . }}
   labels:
     {{- include "activity-tracking.labels" . | nindent 4 }}
-    app.openshift.io/runtime: quarkus
-    service-binding/type: kafka
+    app.openshift.io/runtime: quarkus    
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
