@@ -47,7 +47,7 @@ Selector labels
 */}}
 {{- define "activity-tracking.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "activity-tracking.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/part-of: {{ .Release.Name }}
 {{- end }}
 
 {{/*
