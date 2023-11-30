@@ -4,7 +4,7 @@
 
 replicaCount: 0
 
-image: quay.io/globex-recommendation/recommendation-engine:summit-connect
+image: quay.io/cloud-architecture-workshop/recommendation-engine:latest
 imagePullPolicy: IfNotPresent
 
 nameOverride: ""
