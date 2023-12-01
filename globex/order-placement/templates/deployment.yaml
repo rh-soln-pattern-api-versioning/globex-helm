@@ -28,11 +28,11 @@ spec:
             - name: JSON_SCHEMA
               value: order-placement-payload.json
             - name: REGISTRY_URL
-              value: '{{ .Values.serviceRegistry.url.api }}' 
+              value: '{{ .Values.serviceRegistry.url.api }}'
             - name: REGISTRY_GROUPID
-              value: '{{ .Values.serviceRegistry.jsonSchema.groupId }}' 
+              value: '{{ .Values.serviceRegistry.jsonSchema.groupId }}'
             - name: REGISTRY_ARTIFACTID
-              value: '{{ .Values.ports.jsonSchema.artifactId }}' 
+              value: '{{ .Values.serviceRegistry.jsonSchema.artifactId }}'
             - name: REGISTRY_ARTIFACTID_VERSION
               value: '{{ .Values.ports.jsonSchema.version }}' 
           livenessProbe:
