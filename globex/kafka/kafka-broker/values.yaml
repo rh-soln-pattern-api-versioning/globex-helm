@@ -15,7 +15,7 @@ kafka:
         cpu: 100m
         memory: 200M
   config:
-    autoCreateTopics: false
+    autoCreateTopics: true
     defaultReplicationFactor: 2
     offsetsTopicReplicationFactor: 2
     transactionStateLogReplicationFactor: 2
