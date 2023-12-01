@@ -60,3 +60,7 @@ kafka:
 serviceRegistry:
   url:
     api:
+  jsonSchema:
+    groupId:
+    artifactId:
+    version:

@@ -24,11 +24,17 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
-          env:
-            - name: NODE_ENV
-              value: {{ .Values.nodeEnv }}
-            - name: PORT
-              value: '{{ .Values.ports.httpPort }}' 
+          env: 
+            - name: JSON_SCHEMA
+              value: order-placement-payload.json
+            - name: REGISTRY_URL
+              value: '{{ .Values.serviceRegistry.url.api }}' 
+            - name: REGISTRY_GROUPID
+              value: '{{ .Values.serviceRegistry.jsonSchema.groupId }}' 
+            - name: REGISTRY_ARTIFACTID
+              value: '{{ .Values.ports.jsonSchema.artifactId }}' 
+            - name: REGISTRY_ARTIFACTID_VERSION
+              value: '{{ .Values.ports.jsonSchema.version }}' 
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
