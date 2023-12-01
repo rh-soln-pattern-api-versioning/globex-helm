@@ -25,7 +25,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: quay.io/cloud-architecture-workshop/recommendation-engine:latest
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: {{ .Values.service.containerPort }}
