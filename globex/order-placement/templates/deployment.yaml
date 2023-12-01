@@ -24,6 +24,11 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
+          env:
+            - name: NODE_ENV
+              value: {{ .Values.nodeEnv }}
+            - name: PORT
+              value: '{{ .Values.ports.httpPort }}' 
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:

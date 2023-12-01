@@ -56,10 +56,7 @@ readinessProbe:
 
 kafka:
  orderEventTopic: globex.orders
- bootstrapServer: ""
- securityProtocol: ""
- saslMechanism: ""
- clientId: ""
- clientSecret: ""
- topic:
-    trackingEventTopic: globex.orders
+
+serviceRegistry:
+  url:
+    api:
