@@ -34,7 +34,7 @@ spec:
             - name: REGISTRY_ARTIFACTID
               value: '{{ .Values.serviceRegistry.jsonSchema.artifactId }}'
             - name: REGISTRY_ARTIFACTID_VERSION
-              value: '{{ .Values.ports.jsonSchema.version }}' 
+              value: "1"
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
