@@ -9,7 +9,7 @@ metadata:
   labels:
     strimzi.io/cluster: {{ include "kafka-broker.name" . }}
   annotations:
-    {{- include "kafka-topics.argocd-syncwave" $ | nindent 4 }}
+    {{- include "kafka-broker.argocd-syncwave" . | nindent 4 }}
 spec:
   partitions: "1"
   replicas: "1"
@@ -29,7 +29,7 @@ metadata:
   labels:
     strimzi.io/cluster: {{ include "kafka-broker.name" . }}    
   annotations:
-    {{- include "kafka-topics.argocd-syncwave" $ | nindent 4 }}
+    {{- include "kafka-broker.argocd-syncwave" . | nindent 4 }}
 spec:
   partitions: "1"
   replicas: "globex.orders"
