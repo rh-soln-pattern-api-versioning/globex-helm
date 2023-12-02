@@ -11,4 +11,5 @@ kafka:
 argocd:
   enabled: true
   syncwave: "-2"
+
 namespace: 
