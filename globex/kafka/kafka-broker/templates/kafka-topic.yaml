@@ -32,7 +32,7 @@ metadata:
     {{- include "kafka-broker.argocd-syncwave" . | nindent 4 }}
 spec:
   partitions: "1"
-  replicas: "globex.orders"
+  replicas: "1"
   config:
     retention.ms: "-1"
     segment.bytes: 1073741824
