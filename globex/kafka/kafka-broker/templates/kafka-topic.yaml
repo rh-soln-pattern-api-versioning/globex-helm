@@ -11,10 +11,10 @@ metadata:
   annotations:
     {{- include "kafka-broker.argocd-syncwave" . | nindent 4 }}
 spec:
-  partitions: "1"
-  replicas: "1"
+  partitions: 1
+  replicas: 1
   config:
-    retention.ms: "-1"
+    retention.ms: 1
     segment.bytes: 1073741824
   topicName: globex.tracking
 
@@ -31,9 +31,9 @@ metadata:
   annotations:
     {{- include "kafka-broker.argocd-syncwave" . | nindent 4 }}
 spec:
-  partitions: "1"
-  replicas: "1"
+  partitions: 1
+  replicas: 1
   config:
-    retention.ms: "-1"
+    retention.ms: 1
     segment.bytes: 1073741824
   topicName: globex.orders
