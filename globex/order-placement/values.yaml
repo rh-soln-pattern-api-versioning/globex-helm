@@ -4,8 +4,12 @@
 
 replicaCount: 1
 
-image: quay.io/globex-recommendation/order-placement-service:summit-connect
-imagePullPolicy: IfNotPresent
+image:
+  repository: quay.io/rh_soln_pattern_api_versioning/order-placement
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: 
+
 
 nameOverride: ""
 fullnameOverride: ""

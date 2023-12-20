@@ -18,8 +18,8 @@ spec:
       serviceAccountName: {{ include "order-placement.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image }}"
-          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          image: "{{ .Values.image.repository }}":{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.imagePullPolicy }}
           ports:
             - name: http
               containerPort: 8080
@@ -48,3 +48,5 @@ spec:
         - name: config
           secret:
             secretName: {{ include "order-placement.name" . }}
+            defaultMode: 420
+  

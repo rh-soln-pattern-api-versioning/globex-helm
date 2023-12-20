@@ -8,8 +8,8 @@ kafka:
     - name: globex.orders
       partitions: 1
       retention: -1
-argocd:
-  enabled: true
-  syncwave: "-2"
+  argocd:
+    enabled: true
+    syncwave: "-2"
 
 namespace: 
