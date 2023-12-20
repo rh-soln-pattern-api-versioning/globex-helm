@@ -1,3 +1,5 @@
+{{- range .Values.globex-ui-versions }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -48,3 +50,4 @@ spec:
             - name: API_TRACK_PLACEORDER
               value: {{ .Values.orderPlacementService.url }}{{ .Values.orderPlacementService.postOrderPath }}
       serviceAccountName: {{ include "globex-ui.serviceAccountName" . }}
+{{- end }} 
