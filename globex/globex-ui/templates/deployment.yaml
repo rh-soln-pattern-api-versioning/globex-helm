@@ -28,7 +28,7 @@ spec:
       containers:
         - image:  {{ .image }}
           imagePullPolicy: {{ .imagePullPolicy }}
-          name: {{ $.Chart.Name }}
+          name: {{ .Chart.Name }}
           ports:
             - name: {{ $.Values.ports.httpPortName }}
               containerPort: {{ $.Values.ports.httpPort }}
