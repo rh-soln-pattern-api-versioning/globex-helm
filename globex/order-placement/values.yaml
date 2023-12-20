@@ -4,12 +4,8 @@
 
 replicaCount: 1
 
-image:
-  repository: quay.io/rh_soln_pattern_api_versioning/order-placement
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: 
-
+image: quay.io/rh_soln_pattern_api_versioning/order-placement:latest
+imagePullPolicy: IfNotPresent
 
 nameOverride: ""
 fullnameOverride: ""
