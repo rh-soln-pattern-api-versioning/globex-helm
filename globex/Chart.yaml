@@ -29,9 +29,6 @@ dependencies:
   - name: globex-ui-v1.1
     version: 0.1.0
     repository: file://globex-ui-v1.1
-  - name: globex-ui-v2.0
-    version: 0.1.0
-    repository: file://globex-ui-v2.0
   - name: kafka-broker
     version: 0.1.0
     repository: file://kafka/kafka-broker
