@@ -9,19 +9,19 @@ metadata:
       {"apiVersion":"apps/v1","kind":"Deployment","name":"{{ .Values.activityTrackingService.name }}"},
       {"apiVersion":"apps/v1","kind":"Deployment","name":"{{ .Values.orderPlacementService.name }}"}]
   labels:
-    {{- include "globex-ui.labels" . | nindent 4 }}
+    {{- include "globex-ui-v1.1.labels" . | nindent 4 }}
     app.openshift.io/runtime: nodejs
-  name: {{ include "globex-ui.name" . }}
+  name: {{ include "globex-ui-v1.1.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "globex-ui.selectorLabels" . | nindent 6 }}
+      {{- include "globex-ui-v1.1.selectorLabels" . | nindent 6 }}
   strategy: {}
   template:
     metadata:
       labels:
-        {{- include "globex-ui.selectorLabels" . | nindent 8 }}
+        {{- include "globex-ui-v1.1.selectorLabels" . | nindent 8 }}
     spec:
       containers:
         - image:  {{ .Values.image }}
@@ -47,4 +47,4 @@ spec:
               value: {{ .Values.recommendationEngine.url }}{{ .Values.recommendationEngine.getRecommendedProductsPath }}
             - name: API_TRACK_PLACEORDER
               value: {{ .Values.orderPlacementService.url }}{{ .Values.orderPlacementService.postOrderPath }}
-      serviceAccountName: {{ include "globex-ui.serviceAccountName" . }}
+      serviceAccountName: {{ include "globex-ui-v1.1.serviceAccountName" . }}
