@@ -1,13 +1,7 @@
 replicaCount: 1
 
-globexui:
-  versions:
-    - image: quay.io/rh_soln_pattern_api_versioning/globex-ui:latest
-      imagePullPolicy: IfNotPresent
-    - image: quay.io/rh_soln_pattern_api_versioning/globex-ui:1.1
-      imagePullPolicy: IfNotPresent
-    - image: quay.io/rh_soln_pattern_api_versioning/globex-ui:2.0
-      imagePullPolicy: IfNotPresent
+image: quay.io/rh_soln_pattern_api_versioning/globex-ui:latest
+imagePullPolicy: IfNotPresent
 
 serviceAccount:
   # Specifies whether a service account should be created
