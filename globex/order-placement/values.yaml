@@ -56,11 +56,3 @@ readinessProbe:
 
 kafka:
  orderEventTopic: globex.orders
-
-serviceRegistry:
-  url:
-    api:
-  jsonSchema:
-    groupId:
-    artifactId:
-    version:

@@ -26,15 +26,7 @@ spec:
               protocol: TCP
           env: 
             - name: JSON_SCHEMA
-              value: order-placement-payload.json
-            - name: REGISTRY_URL
-              value: '{{ .Values.serviceRegistry.url.api }}'
-            - name: REGISTRY_GROUPID
-              value: '{{ .Values.serviceRegistry.jsonSchema.groupId }}'
-            - name: REGISTRY_ARTIFACTID
-              value: '{{ .Values.serviceRegistry.jsonSchema.artifactId }}'
-            - name: REGISTRY_ARTIFACTID_VERSION
-              value: "1"
+              value: order-placement-payload.json            
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
