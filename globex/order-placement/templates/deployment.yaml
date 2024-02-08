@@ -27,18 +27,12 @@ spec:
           env: 
             - name: JSON_SCHEMA
               value: order-placement-payload.json            
+            - name: ORDER_PLACEMENT_API
+              value: <replace-me-with-webhook.site-url>
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
             {{- toYaml .Values.readinessProbe | nindent 12 }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          volumeMounts:
-            - mountPath: /deployments/config
-              name: config
-      volumes:
-        - name: config
-          secret:
-            secretName: {{ include "order-placement.name" . }}
-            defaultMode: 420
   
