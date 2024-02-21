@@ -14,9 +14,6 @@ dependencies:
   - name: order-placement
     version: 0.1.0
     repository: file://order-placement
-  - name: activity-tracking-simulator
-    version: 0.1.0
-    repository: file://activity-tracking-simulator
   - name: globex-ui
     version: 0.1.0
     repository: file://globex-ui
