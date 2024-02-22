@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "order-placement-v2.0.name" . }}
+  name: {{ include "order-placement-v2-0.name" . }}
   labels:
-    {{- include "order-placement-v2.0.labels" . | nindent 4 }}
+    {{- include "order-placement-v2-0.labels" . | nindent 4 }}
     app.openshift.io/runtime: quarkus
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "order-placement-v2.0.selectorLabels" . | nindent 6 }}
+      {{- include "order-placement-v2-0.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "order-placement-v2.0.selectorLabels" . | nindent 8 }}
+        {{- include "order-placement-v2-0.selectorLabels" . | nindent 8 }}
     spec:
-      serviceAccountName: {{ include "order-placement-v2.0.serviceAccountName" . }}
+      serviceAccountName: {{ include "order-placement-v2-0.serviceAccountName" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image }}"
