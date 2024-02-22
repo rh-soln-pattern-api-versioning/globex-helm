@@ -11,6 +11,7 @@ metadata:
   labels:
     {{- include "globex-ui-v1-1.labels" . | nindent 4 }}
     app.openshift.io/runtime: nodejs
+    app.kubernetes.io/part-of: v1-1
   name: {{ include "globex-ui-v1-1.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
