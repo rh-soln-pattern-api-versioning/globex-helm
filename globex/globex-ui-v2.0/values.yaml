@@ -1,4 +1,4 @@
-replicaCount: 1
+replicaCount: 0
 
 image: quay.io/rh_soln_pattern_api_versioning/globex-ui:v2.0
 imagePullPolicy: IfNotPresent
