@@ -5,6 +5,7 @@ metadata:
   labels:
     {{- include "order-placement-v2-0.labels" . | nindent 4 }}
     app.openshift.io/runtime: quarkus
+    app.kubernetes.io/part-of: v2-0
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

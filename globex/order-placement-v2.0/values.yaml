@@ -4,7 +4,7 @@
 
 replicaCount: 1
 
-image: quay.io/rh_soln_pattern_api_versioning/order-placement:v2.0
+image: quay.io/rh_soln_pattern_api_versioning/order-placement:latest
 imagePullPolicy: IfNotPresent
 
 nameOverride: ""
