@@ -42,6 +42,6 @@ recommendationEngine:
   url: http://recommendation-engine:8080
   getRecommendedProductsPath: /score/product 
 orderPlacementService:
-  name: order-placement
-  url: http://order-placement:8080
+  name: order-placement-v2-0
+  url: http://order-placement-v2-0:8080
   postOrderPath: /placeorder
