@@ -16,7 +16,7 @@ dependencies:
     repository: file://order-placement
   - name: order-placement-v2-0
     version: 0.1.0
-    repository: file://order-placement-v2-0
+    repository: file://order-placement-v2.0
   - name: globex-ui
     version: 0.1.0
     repository: file://globex-ui
