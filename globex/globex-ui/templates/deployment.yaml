@@ -44,9 +44,9 @@ spec:
             - name: API_TRACK_PLACEORDER
               value: {{ .Values.orderPlacementService.url }}{{ .Values.orderPlacementService.postOrderPath }}
             - name: API_MANAGEMENT_FLAG
-              value: {{ .Values.orderPlacementService.apim.flag }}
+              value: {{ .Values.apim.flag }}
             - name: USER_KEY
-              value: {{ .Values.orderPlacementService.apim.user_key }}
+              value: {{ .Values.apim.user_key }}
             - name: API_USER_KEY_VALUE
-              value: {{ .Values.orderPlacementService.apim.user_key_value }}
+              value: {{ .Values.apim.user_key_value }}
       serviceAccountName: {{ include "globex-ui.serviceAccountName" . }}
