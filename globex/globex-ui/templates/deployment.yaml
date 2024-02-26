@@ -46,7 +46,7 @@ spec:
             - name: API_MANAGEMENT_FLAG
               value: {{ .Values.orderPlacementService.apim.flag }}
             - name: USER_KEY
-              value: {{ .Values.orderPlacementService.apim.user-key }}
+              value: {{ .Values.orderPlacementService.apim.user_key }}
             - name: API_USER_KEY_VALUE
-              value: {{ .Values.orderPlacementService.apim.user-key-value }}
+              value: {{ .Values.orderPlacementService.apim.user_key_value }}
       serviceAccountName: {{ include "globex-ui.serviceAccountName" . }}

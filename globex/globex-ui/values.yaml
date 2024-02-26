@@ -48,5 +48,5 @@ orderPlacementService:
 
 apim:
   flag: Y
-  user-key: user_key
-  user-key-valye: <replace-me>
+  user_key: user_key
+  user_key_value: <replace-me>
