@@ -48,7 +48,7 @@ spec:
             - name: API_TRACK_PLACEORDER
               value: {{ .Values.orderPlacementService.url }}{{ .Values.orderPlacementService.postOrderPath }}
             - name: API_MANAGEMENT_FLAG
-              value: {{ .Values.apim.flag }}
+              value: <replace-me>
             - name: USER_KEY
               value: {{ .Values.apim.user_key }}
             - name: API_USER_KEY_VALUE
