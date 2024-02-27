@@ -26,4 +26,7 @@ dependencies:
   - name: globex-ui-v2-0
     version: 0.1.0
     repository: file://globex-ui-v2.0
+  - name: mongodb
+    version: 0.1.0
+    repository: file://mongodb
   
