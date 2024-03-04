@@ -14,7 +14,7 @@ dependencies:
   - name: order-placement
     version: 0.1.0
     repository: file://order-placement
-  - name: order-placement-1.1.0
+  - name: order-placement-v1.1.0
     version: 0.1.0
     repository: file://order-placement-v1.1.0
   - name: order-placement-v2-0
