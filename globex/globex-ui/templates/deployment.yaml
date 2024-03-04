@@ -48,7 +48,7 @@ spec:
             - name: API_TRACK_PLACEORDER
               value: {{ .Values.apim.user_key_value }}
             - name: API_MANAGEMENT_FLAG
-              value: <replace-me>
+              value: {{ .Values.apim.flag }}
             - name: USER_KEY
               value: {{ .Values.apim.user_key }}
             - name: API_USER_KEY_VALUE
