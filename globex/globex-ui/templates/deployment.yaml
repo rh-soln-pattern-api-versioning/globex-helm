@@ -46,11 +46,11 @@ spec:
             - name: API_CATALOG_RECOMMENDED_PRODUCT_IDS
               value: {{ .Values.recommendationEngine.url }}{{ .Values.recommendationEngine.getRecommendedProductsPath }}
             - name: API_TRACK_PLACEORDER
-              value: {{ .Values.orderPlacementService.url }}{{ .Values.orderPlacementService.postOrderPath }}
-            - name: API_MANAGEMENT_FLAG
               value: <replace-me>
+            - name: API_MANAGEMENT_FLAG
+              value: Y
             - name: USER_KEY
-              value: {{ .Values.apim.user_key }}
+              value: user_key
             - name: API_USER_KEY_VALUE
               value: {{ .Values.apim.user_key_value }}
       serviceAccountName: {{ include "globex-ui.serviceAccountName" . }}
