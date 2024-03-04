@@ -45,3 +45,8 @@ orderPlacementService:
   name: order-placement-v2-0
   url: http://order-placement-v2-0:8080
   postOrderPath: /placeorder
+
+apim:
+  flag: Y
+  user_key: user_key
+  user_key_value: <replace-me>
