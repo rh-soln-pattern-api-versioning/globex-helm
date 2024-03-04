@@ -49,9 +49,9 @@ spec:
             - name: API_TRACK_PLACEORDER
               value: <replace-me>
             - name: API_MANAGEMENT_FLAG
-              value: Y
+              value: <replace-me>
             - name: USER_KEY
-              value: user_key
+              value: {{ .Values.apim.user_key }}
             - name: API_USER_KEY_VALUE
               value: {{ .Values.apim.user_key_value }}
       serviceAccountName: {{ include "globex-ui-v2-0.serviceAccountName" . }}
